@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/14d90b0e6c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>UNIKAT GUITAR</title>
+</head>
+<body>
+    
+    
+
+    
+
+    <header>
+        <div class="container">
+            
+            <nav>
+                <ul>
+                    <img class="logo" src="logo/OIG2.jpeg" alt="">
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <video autoplay muted loop>
+            <source src="WhatsApp Video 2024-06-06 at 10.00.45.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+        <div class="container">
+            <h2>Welcome to our Electric Guitar Shop</h2>
+            <a href="product.html" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <section class="signup">
+            <div class="container">
+                <h2>Sign Up for New Member</h2>
+                <form action="signup.php" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+    
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+    
+                    <input type="submit" value="Sign Up">
+                </form>
+            </div>
+        </section>
+    </footer>
+
+    <script>
+        $(document).ready(function(){
+            $('.carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+        });
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/14d90b0e6c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>PRODUCTS</title>
+</head>
+<body>
+
+    <style>
+
+        body 
+        {
+        background-image: url('OIG1.jpeg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        }
+
+    </style>
+    
+    <header>
+        <div class="container">
+            
+            <nav>
+                <ul>
+                    <img class="logo" src="logo/OIG2.jpeg" alt="">
+                    <li><a href="index.html">Home</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="products">
+        <div class="slideshow-container">
+
+            
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 5</div>
+              <img src="products/a155110_Gibson-ES-335-1964-Custom-Shop-Murphy-Lab-Light-Aged-Figured-Maple-Antique-Vintage-Burst_1920x1457.jpg" style="width:100%">
+              <div class="text"><a href="Gibson-ES-335-1964-Custom.html" target="_blank"><h3>Gibson ES-335 1964 Custom</h3></a><p>7.990,00 €</p></div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 5</div>
+              <img src="products/a156598_Gibson Les Paul 1959 Master Grade 1 Pc Top Tom Murphy Painted TM R9 - Murphys Selection TWO_1920x1457.webp" style="width:100%">
+              <div class="text"><a href="Gibson-Les-Paul-1959.html" target="_blank"><h3>Gibson Les Paul 1959 Master Grade</h3></a><p>28.898,00 €</p></div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 5</div>
+              <img src="products/a155997_1920x1457.webp" style="width:100%">
+              <div class="text"><a href="Fender-Masterbuilt-Todd.html" target="_blank"><h3>Fender Masterbuilt Todd Krause 1952</h3></a><p>9.950,00 €</p></div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="products/a156464-Fender MBD Limited 1957 Stratocaster Timeless NOS flame Neck - Sunburst_1920x1457.webp" style="width:100%">
+                <div class="text"><a href="Fender-MBD-Limited-1957.html" target="_blank"><h3>Fender MBD Limited 1957 Stratocaster Timeless</h3></a><p>4.590,00 €</p></div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="products/a155591_1920x1457.webp" style="width:100%">
+                <div class="text"><a href="Fender-Masterbuilt-J-S-1963.html" target="_blank"><h3>Fender Masterbuilt Jason Smith 1963</h3></a><p>8.990,00 €</p></div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+              <span class="dot" onclick="currentSlide(5)"></span> 
+            </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>Contact us at: example@example.com</p>
+            <ul class="social">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Include jQuery and Slick JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- Initialize Slick Carousel -->
+    <script>
+        $(document).ready(function(){
+            $('.carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                slidesToScroll: 1
+            });
+        });
+    </script>
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+
+
+
+</body>
+</html>
