@@ -4,22 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/14d90b0e6c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <title>PRODUCTS</title>
 </head>
 <body>
 
-    <style>
-
-        body 
-        {
-        background-image: url('OIG1.jpeg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        }
-
-    </style>
+    
     
     <header>
         <div class="container">
@@ -28,6 +19,8 @@
                 <ul>
                     <img class="logo" src="logo/OIG2.jpeg" alt="">
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="#"><i class="fa fa-fw fa-shopping-basket"></i> Basket</a>
+                      <a href="#"><i class="fa fa-fw fa-user"></i> Login</a></li>
                     
                 </ul>
             </nav>
@@ -72,7 +65,7 @@
             <a class="prev" onclick="plusSlides(-1)">❮</a>
             <a class="next" onclick="plusSlides(1)">❯</a>
             
-            </div>
+          </div>
             <br>
             
             <div style="text-align:center">
@@ -82,18 +75,35 @@
               <span class="dot" onclick="currentSlide(4)"></span>
               <span class="dot" onclick="currentSlide(5)"></span> 
             </div>
+
     </section>
 
-    <footer>
-        <div class="container">
-            <p>Contact us at: example@example.com</p>
-            <ul class="social">
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Instagram</a></li>
-            </ul>
-        </div>
+            <!-- Add to Basket Button -->
+<!-- <button onclick="addToBasket()">Add to Basket</button>
+
+<script>
+// JavaScript function to simulate adding an item to the basket
+function addToBasket() {
+  // Code to add the item to the basket
+  alert('Item added to basket!');
+  // Update the basket count if you have a badge or counter
+} -->
+</script>
+
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p><a href="mailto:example@example.com">Contact us: unikatguitar@gmail.com</a></p>
+        
+        <ul class="social">
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
     </footer>
+    
 
     <!-- Include jQuery and Slick JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

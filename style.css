@@ -7,7 +7,7 @@
 
 :root
 {
-    font-family: ;
+    font-family: sans-serif;
 
 }
 
@@ -17,6 +17,10 @@
 body {
     font-family: Arial, sans-serif;
     background-color: black;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .container {
@@ -26,12 +30,25 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: black;
     padding: 25px 0;
     color: #fff;
 
 }
 
+.logo {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-position: center;
+  z-index: 1000;
+  
+}
 
 
 nav ul {
@@ -42,6 +59,7 @@ nav ul {
 nav ul li {
     display: inline;
     margin-right: 20px;
+    
 }
 
 nav ul li a {
@@ -51,7 +69,7 @@ nav ul li a {
 
 .hero {
     position: relative;
-    height: 600px;
+    height: 900px;
     overflow: hidden;
 }
 
@@ -89,25 +107,65 @@ nav ul li a {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #ff6600;
+    background-color: #9c3f00;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
 }
 
-footer {
+.footer {
     background-color: #333;
-    padding: 20px 0;
+    padding: 10px 0;
     color: #fff;
-    position: fixed;
+    position: sticky;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     bottom: 0;
     left: 0;
     right: 0;
 }
 
+.slideshow-container
+{
+  background-image: url('MV5BMjI4OTIwNDAxMF5BMl5BanBnXkFtZTgwOTkzOTAyODE@._V1_.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+footer {
+  background-color: #333;
+  padding: 10px 0;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+footer form {
+    display: flex;
+    flex-direction: column;
+}
+
+footer label,
+footer input[type="text"],
+footer input[type="email"],
+footer input[type="password"],
+footer input[type="submit"] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
 footer p {
     text-align: center;
+    margin-bottom: 10px;
 }
+
 
 .social {
     text-align: center;
@@ -123,17 +181,35 @@ footer p {
     text-decoration: none;
 }
 
+.social li a:hover {
+  color: #555; 
+}
+
 
 /* Slideshow container */
-.mySlides {display: none}
-img {vertical-align: middle;}
+.products {
+  max-width: 1000px;
+  position: relative;
+  margin: 0 auto;
+}
 
-a {
+.mySlides
+{
+  display: none
+}
+
+img 
+{
+  vertical-align: middle;
+}
+
+a 
+{
     text-decoration: none;
     color: white;
 }
 
-/* Slideshow container */
+
 .slideshow-container {
   max-width: 1000px;
   position: relative;
@@ -193,6 +269,7 @@ a {
   height: 15px;
   width: 15px;
   margin: 0 2px;
+  
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -220,15 +297,3 @@ a {
 }
 
 
-.logo {
-    width: 50px;
-    height: 50px;
-    margin: 0 auto;
-    display: block;
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    background-position: center;
-    
-}
